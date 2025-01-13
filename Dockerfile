@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY . /app
+COPY . .
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
@@ -17,5 +17,5 @@ EXPOSE 5000
 ENV FLASK_APP=app.py
 
 # Run the Flask app when the container launches
-CMD ["python", "PythonFlask/main.py"]
+CMD ["python", "main.py"]
 
